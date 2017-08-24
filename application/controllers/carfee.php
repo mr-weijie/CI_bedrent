@@ -11,12 +11,29 @@ class Carfee extends CI_Controller{
     }
     public function feelist(){
         $this->load->library('pagination');
-        $perpage=22;
+        $pageNo=$this->uri->segment(4);
+        $ClientID=null;
+        if(isset($pageNo)){//说明有ClientID项
+            $ClientID=$this->uri->segment(3);
+        }else{
+            $pageNo=$this->uri->segment(3);
+            if(strlen($pageNo)==32){
+                //说明是具体ClientID的信息形式：index.php/fee/feelist/87533803B28F43F0E330131E2D17340C
+                $ClientID=$this->uri->segment(3);
+            }
+        }
+        $perpage=2;
         //配置项设置
-        $config['base_url']=site_url('carfee/index');
-        $config['total_rows'] = $this->db->count_all_results('waterfee');
+        if(isset($ClientID)){
+            $config['base_url']=site_url('carfee/feelist/'.$ClientID);
+            $config['total_rows'] = $this->db->where(array('ClientID'=>$ClientID))->count_all_results('waterfee');
+            $config['uri_segment']=4;
+        }else{
+            $config['base_url']=site_url('carfee/feelist');
+            $config['total_rows'] = $this->db->count_all_results('waterfee');
+            $config['uri_segment']=3;
+        }
         $config['per_page']=$perpage;
-        $config['uri_segment']=3;
 
         $config['first_link'] = '第一页';
         $config['prev_link'] = '上一页';
@@ -30,12 +47,17 @@ class Carfee extends CI_Controller{
         $this->db->limit($perpage, $offset);
         //p($data['links']);die;
         $this->load->model('carfee_model','carfee');
-        $data=$this->carfee->feelist();
+        $data=$this->carfee->feelist($ClientID);
         $data['title']='水卡费列表';
         $data['links']=$links;
         $data['disable']='carfee';
+        $data['ClientID']=$ClientID;
         $this->load->view('header.html',$data);
-        $this->load->view('fee/nav.html');
+        if(isset($ClientID)){
+            $this->load->view('fee/nav_person.html');
+        }else{
+            $this->load->view('fee/nav.html');
+        }
         $this->load->view('fee/water/feelist.html');
         $this->load->view('footer.html');
 

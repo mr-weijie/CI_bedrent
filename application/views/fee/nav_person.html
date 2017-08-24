@@ -1,0 +1,6 @@
+<div class="nav">
+    <ul>
+        <li><a href="<?php echo site_url('home')?>">首页</a> </li>
+        <li><a href="<?php echo ($disable=='bedfee') ?site_url('fee/addfee/'.$ClientID):site_url('carfee/addfee/'.$ClientID)?>">新增<?php echo ($disable=='bedfee') ? '床费':'水费'?>记录</a></li>
+    </ul>
+</div>

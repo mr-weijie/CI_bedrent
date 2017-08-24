@@ -53,8 +53,13 @@ class Fee extends CI_Controller{
         $data['title']='床费列表';
         $data['links']=$links;
         $data['disable']='bedfee';
+        $data['ClientID']=$ClientID;
         $this->load->view('header.html',$data);
-        $this->load->view('fee/nav.html');
+        if(isset($ClientID)){
+            $this->load->view('fee/nav_person.html');
+        }else{
+            $this->load->view('fee/nav.html');
+        }
         $this->load->view('fee/bed/feelist.html');
         $this->load->view('footer.html');
     }
@@ -91,9 +96,10 @@ class Fee extends CI_Controller{
         $status=$this->validation();//调用验证函数
         if($status){
             $IdentityID=$this->input->post('IdentityID');
+            $ClientID=$this->input->post('ClientID');
             $data=array(
                 'FeeID'=>strtoupper(md5($IdentityID.date("Y-m-d H:i:s"))),//采用系统时间+IdentityID的方法
-                'ClientID'=>$this->input->post('ClientID'),
+                'ClientID'=>$ClientID,
                 'IdentityID'=>$IdentityID,
                 'ClientName'=>$this->input->post('ClientName'),
                 'Rent'=>$this->input->post('Rent'),
@@ -107,7 +113,7 @@ class Fee extends CI_Controller{
             $status=$this->fee->insert($data);
             if($status){
                 $msg='新增缴费记录成功！';
-                $url='fee/showfee/';
+                $url='fee/feelist/'.$ClientID;
                 success($url, $msg);
             }
 

@@ -7,9 +7,15 @@
  */
 class Carfee_model extends CI_Model{
 
-    public function feelist(){
-        $data['carfee']=$this->db->order_by('ModDate','desc')->get('waterfee')->result_array();
-        $data['carfeesum']=$this->db->select_sum('Money')->get('waterfee')->result_array();
+    public function feelist($ClientID){
+        if(isset($ClientID))
+        {
+            $data['carfee']=$this->db->where(array('ClientID'=>$ClientID))->order_by('ModDate','desc')->get('waterfee')->result_array();
+            $data['carfeesum']=$this->db->select_sum('Money')->where(array('ClientID'=>$ClientID))->get('waterfee')->result_array();
+        }else{
+            $data['carfee']=$this->db->order_by('ModDate','desc')->get('waterfee')->result_array();
+            $data['carfeesum']=$this->db->select_sum('Money')->get('waterfee')->result_array();
+        }
       //    p($data);die;
         return $data;
     }

@@ -22,7 +22,7 @@ class Carfee extends CI_Controller{
                 $ClientID=$this->uri->segment(3);
             }
         }
-        $perpage=2;
+        $perpage=22;
         //配置项设置
         if(isset($ClientID)){
             $config['base_url']=site_url('carfee/feelist/'.$ClientID);

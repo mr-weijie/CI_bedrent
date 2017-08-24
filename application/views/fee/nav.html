@@ -1,0 +1,21 @@
+<div class="nav">
+    <ul>
+        <li><a href="<?php echo site_url('home')?>">首页</a> </li>
+        <li><?php
+        if($disable!='bedfee'){
+            echo '<a href="'.site_url('fee').'">床费列表</a>' ;
+            }else{
+            echo '<span style="color: #990000">床费列表</span>';
+            }
+            ?>
+        </li>
+        <li><?php
+        if($disable!='carfee'){
+            echo '<a href="'.site_url('carfee').'">水费列表</a>' ;
+            }else{
+            echo '<span style="color: #990000">水费列表</span> ';
+            }
+            ?>
+        </li>
+    </ul>
+</div>

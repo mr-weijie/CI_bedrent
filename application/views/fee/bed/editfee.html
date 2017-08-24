@@ -1,0 +1,18 @@
+<form name="form1" action="<?php echo site_url('fee/update')?>" method="post">
+    <div class="editfee">
+
+        <h1><input type="hidden" name="ClientName" value="<?php echo isset($feeinfo[0]['ClientName'])? $feeinfo[0]['ClientName']:set_value('ClientName') ?>"><?php echo isset($feeinfo[0]['ClientName'])? $feeinfo[0]['ClientName']:set_value('ClientName') ?>--缴费操作</h1>
+        <ul>
+            <li>房客姓名：<?php echo isset($feeinfo[0]['ClientName'])? $feeinfo[0]['ClientName']:set_value('ClientName') ?></li>
+            <li>身份证号：<input type="hidden" name="IdentityID" value="<?php echo isset($feeinfo[0]['IdentityID'])? $feeinfo[0]['IdentityID']:set_value('IdentityID') ?>"><?php echo isset($feeinfo[0]['IdentityID'])? $feeinfo[0]['IdentityID']:set_value('IdentityID') ?></li>
+            <li>入住床号：<input type="hidden" name="BedNo" value="<?php echo isset($feeinfo[0]['BedNo'])? $feeinfo[0]['BedNo']:set_value('BedNo') ?>"> <?php echo isset($feeinfo[0]['BedNo'])? $feeinfo[0]['BedNo']:set_value('BedNo') ?></li>
+            <li>床位租金：<input type="text" class="noneempty" name="Rent" value="<?php echo isset($feeinfo[0]['Rent'])? $feeinfo[0]['Rent']:set_value('Rent')?>"></li><?php echo form_error('Rent', '<li class="err">', '</li>') ?>
+            <li>被褥租金：<input type="text" class="noneempty" name="Bedding" value="<?php echo isset($feeinfo[0]['Bedding'])? $feeinfo[0]['Bedding']:set_value('Bedding')?>"></li><?php echo form_error('Bedding', '<li class="err">', '</li>') ?>
+            <li>起始日期：<input type="text" class="noneempty" name="StartDate" value="<?php echo isset($feeinfo[0]['StartDate'])? $feeinfo[0]['StartDate']:set_value('StartDate')?>"></li><?php echo form_error('StartDate', '<li class="err">', '</li>') ?>
+            <li>终止日期：<input type="text" class="noneempty" name="StopDate" value="<?php echo isset($feeinfo[0]['StopDate'])? $feeinfo[0]['StopDate']:set_value('StopDate')?>"></li><?php echo form_error('StopDate', '<li class="err">', '</li>') ?>
+            <li>其他说明：<textarea name="Remarks"  rows="4" cols="30" ><?php echo isset($feeinfo[0]['Remarks'])? $feeinfo[0]['Remarks']:set_value('Remarks')?></textarea></li>
+            <li style="height: 10px;"><input type="hidden" name="FeeID" value="<?php echo isset($feeinfo[0]['FeeID'])? $feeinfo[0]['FeeID']:set_value('FeeID')?>"></li>
+            <li style=" padding-left: 100px; margin-top: 60px;"><input class="submit" type="submit" value="提交"></li>
+        </ul>
+    </div>
+</form>

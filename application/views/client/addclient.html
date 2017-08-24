@@ -1,0 +1,27 @@
+<div class="nav">
+    <ul><li><a href="<?php echo site_url('home')?>">返回首页</a> </li></ul>
+</div>
+<div class="addclient">
+    <h1>新增房客信息</h1>
+    <form name="form1" method="post" action="<?php echo site_url('home/insertclient') ?>">
+        <ul>
+            <li>房客姓名：<input class="noneempty" type="text" name="ClientName" value="<?php echo set_value('ClientName') ?>" ></li></li><?php echo form_error('ClientName', '<li class="err">', '</li>') ?>
+            <li>身份证号：<input class="noneempty" type="text" name="IdentityID" value="<?php echo set_value('IdentityID') ?>" ></li><?php echo form_error('IdentityID', '<li class="err">', '</li>') ?>
+            <li>入住床号：<input class="noneempty" type="text" name="BedNo" value="<?php echo set_value('BedNo') ?>" ></li><?php echo form_error('BedNo', '<li class="err">', '</li>') ?>
+            <li>水卡编号：<input class="noneempty" type="text" name="CardNo" value="<?php echo set_value('CardNo') ?>" ></li><?php echo form_error('CardNo', '<li class="err">', '</li>') ?>
+            <li>本人电话：<input class="noneempty" type="text" name="PhoneNo" value="<?php echo set_value('PhoneNo') ?>" ></li><?php echo form_error('PhoneNo', '<li class="err">', '</li>') ?>
+            <li>他人电话：<input class="input" type="text" name="ContactPhoneNo" value="<?php echo set_value('ContactPhoneNo') ?>" ></li>
+            <li>他人关系：<input class="input" type="text" name="ContactRelation" value="<?php echo set_value('ContactRelation') ?>" ></li>
+            <li>入住押金：<input class="noneempty" type="text" name="Deposit" value="<?php echo set_value('Deposit') ?>" ></li><?php echo form_error('Deposit', '<li class="err">', '</li>') ?>
+            <li>起始日期：<input class="noneempty" type="text" name="StartDate" value="<?php echo set_value('StartDate') ?>" ></li><?php echo form_error('StartDate', '<li class="err">', '</li>') ?>
+            <li>终止日期：<input class="noneempty" type="text" name="StopDate" value="<?php echo set_value('StopDate') ?>" ></li><?php echo form_error('StopDate', '<li class="err">', '</li>') ?>
+            <li>其他说明：<textarea name="Remarks"  rows="4" cols="30" ><?php echo set_value('Remarks') ?></textarea> </li>
+            <li>入住状态：
+                <select name="Valid">
+                    <option value="1" select>在住</option>
+                    <option value="0">搬离</option>
+                </select></li>
+            <li style=" padding-left: 100px; "><input class="submit" type="submit" value="提交"></li>
+         </ul>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+<div class="nav">
+    <div class="pagetitle">缴床费信息</div>
+    <ul>
+        <li><a href="/">首页</a> </li>
+        <li><a href="<?php echo site_url('fee/edit/') ?>">编辑</a> </li>
+    </ul>
+</div>
+<div class="detail">
+    <h1>缴费详情</h1>
+    <ul>
+        <li>房客姓名：<?php echo $fee[0]['ClientName']; ?></li>
+        <li>身份证号：<?php echo$fee[0]['IdentityID']; ?></li>
+        <li>床位租金：<?php echo$fee[0]['Rent']; ?></li>
+        <li>被褥租金：<?php echo$fee[0]['Bedding']; ?></li>
+        <li>起始日期：<?php echo$fee[0]['StartDate']; ?></li>
+        <li>终止日期：<?php echo$fee[0]['StopDate']; ?></li>
+        <li>备注说明：<?php echo $fee[0]['Remarks']; ?></li>
+        <li>最后更新：<?php echo $fee[0]['ModDate']; ?></li>
+    </ul>
+</div>

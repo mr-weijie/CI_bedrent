@@ -1,0 +1,51 @@
+* { margin: 0;border: 0; font-size: 14px;}
+body { width: 360px;height:100px; margin: 0 auto; border: 2px;}
+div { margin: 0 auto;}
+a { text-decoration: none; color: #4F5155;}
+a:hover{ color: #0000FF; text-decoration: underline;}
+.nav{ width: 350px; height: 30px;}
+.nav ul{ padding-left: 2px;}
+.nav ul li{ float: left; list-style: none; margin-left: 10px;  height: 30px; line-height: 30px;}
+.list{ width: 350px; height: auto; clear: both;margin-top: 5px; }
+.list ul{ padding-left: 2px;}
+.list ul li{ clear: both; list-style:none; height: 25px; line-height: 25px;}
+.yjhj { clear: both;}
+.pagetitle{  font-size: 16px;color:#990000; font-weight: bold; text-align: center;}
+
+.detail { clear: both; }
+.detail ul{ padding-left: 18px;}
+.detail ul li { font-size: 14px;}
+.detail h1 {font-size: 18px; }
+.upload { position: relative;}
+.upload span{position: absolute; left: 80px;}
+
+.edit ul{ padding-left: 2px;}
+.edit ul li{ font-size: 16px; list-style: none; height: 25px; line-height: 25px; margin-top: 3px;}
+.edit h1{ font-size: 18px; padding-left: 70px; margin: 20px;}
+
+.input{ border: 1px;border-style: solid; border-color: #0000FF; background-color: #dddddd; padding: 2px;}
+select{ border: 1px;border-style: solid; border-color: #0000FF; background-color: #dddddd;padding: 2px;}
+
+.err {color: #ff0000;}
+.submit { border: 1px; border-style: solid; border-color: #CCCCCC; background-color:#CCCCCC}
+
+.addclient { clear: both}
+.addclient ul{padding-left: 2px;}
+.addclient ul li{font-size: 14px; line-height: 30px; list-style-type: none;}
+.addclient h1 { font-size: 16px; margin-bottom: 20px;}
+.addclient textarea { border: 1px; border-style: solid; background-color: #D0D0D0}
+.input{ border:1px;border-style: solid;border-bottom-color: #4F5155;}
+.noneempty{ border: 1px; border-style: solid; border-color: #ff0000;background-color:  #D0D0D0; height: 18px;}
+
+.list-fee{ width: 350px; height: auto; clear: both;margin-top: 5px; }
+.list-fee ul{ padding-left: 2px;}
+.list-fee ul li{ clear: both; list-style:none; height: 20px; line-height: 20px;}
+.page { text-align: center;}
+.page a{ margin-left: 10px;}
+.page strong{margin-left: 10px;}
+
+.editfee{ clear: both;}
+.editfee h1{font-size: 16px;color: #ff0000; margin-top: 10px; text-align: center;}
+.editfee ul{ padding-left: 12px;}
+.editfee ul li{font-size: 16px; list-style: none; height: 25px; line-height: 25px; margin-top: 3px;}
+.editfee textarea { border: 1px; border-style: solid; background-color: #D0D0D0}

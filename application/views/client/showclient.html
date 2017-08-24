@@ -1,0 +1,45 @@
+<div class="nav">
+    <div class="pagetitle">个人信息</div>
+    <ul>
+        <li><a href="/">首页</a> </li>
+        <li><a href="<?php echo site_url('home/editclient/'.$clientinfo[0]['ClientID']);?>">编辑</a> </li>
+        <li><a href="<?php echo site_url('fee/addfee/'.$clientinfo[0]['ClientID'])?>">缴床费</a> </li>
+        <li><a href="#">缴水费</a> </li>
+    </ul>
+</div>
+<div class="detail">
+    <h1><?php echo $clientinfo[0]['ClientName']; ?></h1>
+    <ul>
+        <li>身份证号：<?php echo $clientinfo[0]['IdentityID']; ?></li>
+        <li>现床位号：<?php echo $clientinfo[0]['BedNo']; ?></li>
+        <li>水卡号码：<?php echo $clientinfo[0]['CardNo']; ?></li>
+        <li>本人电话：<?php echo $clientinfo[0]['PhoneNo']; ?></li>
+        <li>他人电话：<?php echo $clientinfo[0]['ContactPhoneNo']; ?></li>
+        <li>他人关系：<?php echo $clientinfo[0]['ContactRelation']; ?></li>
+        <li>起始日期：<?php echo $clientinfo[0]['StartDate']; ?></li>
+        <li>终止日期：<?php echo $clientinfo[0]['StopDate']; ?></li>
+        <li>入住押金：<?php echo $clientinfo[0]['Deposit']; ?></li>
+        <li>入住状态：<?php echo ($clientinfo[0]['Valid']==1) ? "在住" : '搬离' ?></li>
+        <li>备注说明：<?php echo $clientinfo[0]['Remarks']; ?></li>
+        <li>最后更新：<?php echo $clientinfo[0]['ModDate']; ?></li>
+        <li class="upload">上传图片:
+            <span>
+                <form enctype="multipart/form-data" method="post" name="upform" action="<?php echo site_url('home/upload/'.$clientinfo[0]['ClientID'])?>">
+                    <input name="upfile" type="file" size="1" style="font-size:10px"><input type="submit" value="上传" style="font-size:14px">
+                </form>
+            </span>
+        </li>
+    </ul>
+    <?php
+       $IdentityPhoto=$clientinfo[0]['IdentityPhoto'];
+		if(strlen($IdentityPhoto)>0)
+        {
+        $file =  'photos/'.$IdentityPhoto;
+        if(file_exists($file))//如果图片文件存在
+        {
+         $file = '../../../photos/'.$IdentityPhoto;
+          echo '<div style=" text-align:center; margin-top: 10px;"><img src="'.$file.'" alt="" width="90%" /></div><DIV align="center">身份证图</DIV>';
+        }
+        }
+        ?>
+</div>

@@ -1,0 +1,45 @@
+<div class="nav">
+    <ul>
+        <li><a href="<?php echo site_url('home/listclient/1')?>">在住列表</a></li>
+        <li><a href="<?php echo site_url('home/listclient/0')?>">搬离列表</a></li>
+        <li><a href="<?php echo site_url('home/addclient')?>">新增房客</a></li>
+        <li><a href="<?php echo site_url('fee/')?>">缴费列表</a></li>
+        <li><a href="#">床位分布</a></li>
+    </ul>
+</div>
+<div class="list">
+    <div class="pagetitle"><?php echo $Valid ?>房客列表</div>
+    <ul>
+        <?php
+            $recc=0;//用来统计记录数
+            $SumDeposit=0;
+            foreach($clientinfo as $item):
+              $recc++;
+              $No=$recc;
+              $ClientID         =$item['ClientID'];
+			    $ClientName       =$item['ClientName'];
+			    $IdentityPhoto    =$item['IdentityPhoto'];
+			    $bedNo            =$item['BedNo'];
+			    $Deposit          =$item['Deposit'];
+    			 $StartDate        =$item['StartDate'];
+			    $StopDate         =$item['StopDate'];
+			    $SumDeposit       =$SumDeposit+$Deposit;
+              if($No<10) $No='0'.$No;
+              if(strlen($bedNo)==4) $bedNo='0'.$bedNo;
+              if(strlen($ClientName)==6) $ClientName=$ClientName.'&nbsp;&nbsp;&nbsp;&nbsp;';
+      			if(strlen($IdentityPhoto)>0){
+        $file = 'photos/'.$IdentityPhoto;
+        if(!file_exists($file))//如果图片文件不存在
+        {
+        $ClientName='<span style="color: #ff0000">'.$ClientName.'</span>';//没有身份证图片的标红
+        }
+        }else
+        {
+        $ClientName='<span style="color: #ff0000">'.$ClientName.'</span>';//没有身份证号码的标红
+        }
+        echo '<li><a href="'.site_url('home/showclient/'.$ClientID).'">'.$No.'&nbsp;'.$ClientName.'&nbsp;'.$bedNo.'&nbsp;押:'.$Deposit.'&nbsp;期限:'.$StartDate.'～'.$StopDate.'</a>';
+        endforeach;
+        ?>
+    </ul>
+    <div class="yjhj">押金合计：<?php echo $SumDeposit;?></div>
+</div>

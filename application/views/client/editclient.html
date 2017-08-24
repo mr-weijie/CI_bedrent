@@ -1,0 +1,27 @@
+<div  class="edit">
+    <h1>房客信息</h1>
+    <form name="form1" method="post" action="<?php echo site_url('home/updateclient') ?>">
+    <ul>
+         <li>房客姓名：<input type="text" class="input" name="ClientName" value="<?php echo isset($clientinfo[0]['ClientName']) ?$clientinfo[0]['ClientName']:set_value('ClientName') ?>"></li><?php echo form_error('ClientName', '<li class="err">', '</li>') ?>
+        <li>身份证号：<input type="text" class="input" name="IdentityID" value="<?php echo isset($clientinfo[0]['IdentityID']) ?$clientinfo[0]['IdentityID']:set_value('IdentityID') ?>"></li><?php echo form_error('IdentityID', '<li class="err">', '</li>') ?>
+        <li>入住床号：<input type="text" class="input" name="BedNo" value="<?php echo isset($clientinfo[0]['BedNo']) ?$clientinfo[0]['BedNo']:set_value('BedNo')?>"></li><?php echo form_error('BedNo', '<li class="err">', '</li>') ?>
+        <li>水卡编号：<input type="text" class="input" name="CardNo" value="<?php echo isset($clientinfo[0]['CardNo']) ?$clientinfo[0]['CardNo']:set_value('CardNo') ?>"></li><?php echo form_error('CardNo', '<li class="err">', '</li>') ?>
+        <li>本人电话：<input type="text" class="input" name="PhoneNo" value="<?php echo isset($clientinfo[0]['PhoneNo']) ?$clientinfo[0]['PhoneNo']:set_value('PhoneNo')?>"></li><?php echo form_error('PhoneNo', '<li class="err">', '</li>') ?>
+        <li>他人电话：<input type="text" class="input" name="ContactPhoneNo" value="<?php echo isset($clientinfo[0]['ContactPhoneNo']) ?$clientinfo[0]['ContactPhoneNo']:set_value('ContactPhoneNo') ?>"></li>
+        <li>他人关系：<input type="text" class="input" name="ContactRelation" value="<?php echo isset($clientinfo[0]['ContactRelation']) ?$clientinfo[0]['ContactRelation']:set_value('ContactRelation')?>"></li>
+        <li>入住押金：<input type="text" class="input" name="Deposit" value="<?php echo isset($clientinfo[0]['Deposit']) ?$clientinfo[0]['Deposit']:set_value('Deposit')?>"></li><?php echo form_error('Deposit', '<li class="err">', '</li>') ?>
+        <li>起始日期：<input type="text" class="input" name="StartDate" value="<?php echo isset($clientinfo[0]['StartDate']) ?$clientinfo[0]['StartDate']:set_value('StartDate')?>"></li><?php echo form_error('StartDate', '<li class="err">', '</li>') ?>
+        <li>终止日期：<input type="text" class="input" name="StopDate" value="<?php echo isset($clientinfo[0]['StopDate']) ?$clientinfo[0]['StopDate']:set_value('StopDate')?>"></li><?php echo form_error('StopDate', '<li class="err">', '</li>') ?>
+        <li>其他说明：<input type="text" class="input" name="Remarks" value="<?php echo isset($clientinfo[0]['Remarks']) ?$clientinfo[0]['Remarks']:set_value('Remarks')?>"></li>
+        <li>入住状态：<?php $Valid=isset($clientinfo[0]['Valid']) ?$clientinfo[0]['Valid']:set_value('Valid');?>
+            <select name="Valid">
+                <option value="<?php echo $Valid?>" selected><?php if($Valid=='1') {echo '在住';}else {echo '搬离';} ?></option>
+                <option value="1">在住</option>
+                <option value="0">搬离</option>
+            </select>
+        </li>
+        <li style="height: 10px;"><input type="hidden" name="ClientID" value="<?php echo isset($clientinfo[0]['ClientID']) ?$clientinfo[0]['ClientID']:set_value('ClientID')?>"></li>
+        <li style=" padding-left: 100px; "><input class="submit" type="submit" value="提交"></li>
+    </ul>
+    </form>
+</div>

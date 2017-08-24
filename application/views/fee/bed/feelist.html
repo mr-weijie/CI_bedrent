@@ -1,0 +1,28 @@
+<div class="list-fee">
+    <ul>
+        <?php
+        $num=0;
+        $RentSum=$feesum[0]['Rent'];
+        $BeddingSum=$Bedding[0]['Bedding'];
+        foreach($fee as $item):
+            $num++;
+            $xh=$num;
+            if($xh<10){
+                $xh='00'.$num;
+            }elseif($xh<100){
+                $xh='0'.$num;
+            }
+            $ModDate=date('Y-m-d',strtotime($item['ModDate']));
+            $Bedding=$item['Bedding'];
+            $feeID=$item['FeeID'];
+           // $RentSum=$RentSum+$item['Rent'];
+            $Bedding=($Bedding==0) ?'00':$Bedding;
+            $ClientName=$item['ClientName'];
+            if(strlen($ClientName)==6) $ClientName=$ClientName.'&nbsp;&nbsp;&nbsp;&nbsp;';
+        ?>
+        <li><a href="<?php echo site_url('fee/showfee/'.$feeID)?>"><?php echo $xh.'.'.$ClientName.'.床费:'.$item['Rent'].'&nbsp;被褥:'.$Bedding.'&nbsp;更新:'.$ModDate; ?></a> </li>
+         <?php endforeach;?>
+        <li style="color: #990000; font-weight: bold;">合计：<?php echo ($RentSum+$BeddingSum).'&nbsp;其中,床费:'.$RentSum.'&nbsp;被褥:'.$BeddingSum; ?></li>
+    </ul>
+</div>
+<div class="page"><?php echo $links?></div>

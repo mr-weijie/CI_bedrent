@@ -11,14 +11,31 @@ class Fee extends CI_Controller{
         $this->feelist();
     }
 
-    public function  feelist(){
+    public function  feelist(){//缴费列表
         $this->load->library('pagination');
+        $pageNo=$this->uri->segment(4);
+        $ClientID=null;
+       if(isset($pageNo)){//说明有ClientID项
+            $ClientID=$this->uri->segment(3);
+        }else{
+            $pageNo=$this->uri->segment(3);
+            if(strlen($pageNo)==32){
+                //说明是具体ClientID的信息形式：index.php/fee/feelist/87533803B28F43F0E330131E2D17340C
+                $ClientID=$this->uri->segment(3);
+            }
+        }
         $perpage=22;
         //配置项设置
-        $config['base_url']=site_url('fee/index');
-        $config['total_rows'] = $this->db->count_all_results('fee');
+        if(isset($ClientID)){
+            $config['base_url']=site_url('fee/feelist/'.$ClientID);
+            $config['total_rows'] = $this->db->where(array('ClientID'=>$ClientID))->count_all_results('fee');
+            $config['uri_segment']=4;
+        }else{
+            $config['base_url']=site_url('fee/feelist');
+            $config['total_rows'] = $this->db->count_all_results('fee');
+            $config['uri_segment']=3;
+        }
         $config['per_page']=$perpage;
-        $config['uri_segment']=3;
 
         $config['first_link'] = '第一页';
         $config['prev_link'] = '上一页';
@@ -32,7 +49,7 @@ class Fee extends CI_Controller{
         $this->db->limit($perpage, $offset);
       //p($data['links']);die;
         $this->load->model('fee_model','fee');
-        $data=$this->fee->feelist();
+        $data=$this->fee->feelist($ClientID);
         $data['title']='床费列表';
         $data['links']=$links;
         $data['disable']='bedfee';
@@ -41,7 +58,7 @@ class Fee extends CI_Controller{
         $this->load->view('fee/bed/feelist.html');
         $this->load->view('footer.html');
     }
-    public function showfee(){
+    public function showfee(){//显示具体缴费记录页
         $feeID=$this->uri->segment(3);
         $this->load->model('fee_model','fee');
         $data['fee']=$this->fee->getfeeinfo($feeID);
@@ -51,7 +68,7 @@ class Fee extends CI_Controller{
         $this->load->view('footer.html');
 
     }
-    public function editfee(){
+    public function editfee(){//编辑缴费记录表单页
         $this->load->helper('form');
         $FeeID=$this->uri->segment(3);
         $this->load->model('fee_model','fee');
@@ -61,7 +78,7 @@ class Fee extends CI_Controller{
         $this->load->view('footer.html');
     }
 
-    public function addfee(){
+    public function addfee(){//新增缴费记录表单页
         $ClientID=$this->uri->segment(3);
         $this->load->model('clientinfo_model','clientinfo');
         $data['clientinfo']=$this->clientinfo->getclientinfo($ClientID);
@@ -70,7 +87,7 @@ class Fee extends CI_Controller{
         $this->load->view('fee/bed/addfee.html');
         $this->load->view('footer.html');
     }
-    public function insert(){
+    public function insert(){//新增缴费记录储存模块
         $status=$this->validation();//调用验证函数
         if($status){
             $IdentityID=$this->input->post('IdentityID');

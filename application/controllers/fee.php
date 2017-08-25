@@ -121,7 +121,7 @@ class Fee extends CI_Controller{
         {
             $this->load->helper('form');//加载显示表单错误类
             $this->load->view('header.html');
-            $this->load->view('fee/bed/editfee.html');
+            $this->load->view('fee/bed/addfee.html');
             $this->load->view('footer.html');
         }
 

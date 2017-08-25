@@ -159,7 +159,7 @@ $status=$this->upload->do_upload('upfile');//此外的参数必须与表单中�
         $photofile=$this->upload->data('file_name');//返回已保存的文件名
         $this->load->model('clientinfo_model','clientinfo');
         $this->clientinfo->uploadfile($clientID,$photofile);
-        redirect(site_url('/home/userinfo/'.$clientID));
+        redirect(site_url('home/showclient/'.$clientID));
     }else
     {
         error('请正确选择图片后再上传！');

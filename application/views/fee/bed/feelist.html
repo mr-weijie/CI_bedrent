@@ -4,6 +4,8 @@
         $num=0;
         $RentSum=$feesum[0]['Rent'];
         $BeddingSum=$Bedding[0]['Bedding'];
+        if(strlen($RentSum)==0) $RentSum=0;
+        if(strlen($BeddingSum)==0) $BeddingSum=0;
         foreach($fee as $item):
             $num++;
             $xh=$num;

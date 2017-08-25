@@ -2,8 +2,9 @@
     <ul>
         <?php
         $num=0;
-        $carfeeSum=$carfeesum[0]['Money'];
-        foreach($carfee as $item):
+        $cardfeeSum=$cardfeesum[0]['Money'];
+        if(strlen($cardfeeSum)==0) $cardfeeSum=0;
+        foreach($cardfee as $item):
             $num++;
             $xh=$num;
             if($xh<10){
@@ -15,9 +16,9 @@
             $ClientName=$item['ClientName'];
             if(strlen($ClientName)==6) $ClientName=$ClientName.'&nbsp;&nbsp;&nbsp;&nbsp;';
         ?>
-        <li><a href="#"><?php echo $xh.'.'.$ClientName.'.卡号:'.$item['CardNo'].'&nbsp;消费:'.$item['Money'].'&nbsp;更新:'.$ModDate; ?></a> </li>
+        <li><a href="<?php echo site_url('cardfee/showfee/'.$item['FeeID'])?>"><?php echo $xh.'.'.$ClientName.'.卡号:'.$item['CardNo'].'&nbsp;消费:'.$item['Money'].'&nbsp;更新:'.$ModDate; ?></a> </li>
          <?php endforeach;?>
-        <li style="color: #990000; font-weight: bold;">合计：<?php echo $carfeeSum; ?></li>
+        <li style="color: #990000; font-weight: bold;">合计：<?php echo $cardfeeSum; ?></li>
     </ul>
 </div>
 <div class="page"><?php echo $links?></div>

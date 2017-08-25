@@ -3,8 +3,9 @@ body { width: 360px;height:100px; margin: 0 auto; border: 2px;}
 div { margin: 0 auto;}
 a { text-decoration: none; color: #4F5155;}
 a:hover{ color: #0000FF; text-decoration: underline;}
-.nav{ width: 350px; height: 30px;}
-.nav ul{ padding-left: 2px;}
+.nav{ width: 350px; height: 30px; background-color:#dddddd;}
+.nav a{color: #0000FF;font-weight: bold;}
+.nav ul{ padding-left: 2px; }
 .nav ul li{ float: left; list-style: none; margin-left: 10px;  height: 30px; line-height: 30px;}
 .list{ width: 350px; height: auto; clear: both;margin-top: 5px; }
 .list ul{ padding-left: 2px;}

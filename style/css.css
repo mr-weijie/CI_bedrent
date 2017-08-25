@@ -54,6 +54,7 @@ select{ border: 1px;border-style: solid; border-color: #0000FF; background-color
 .editfee ul li{font-size: 16px; list-style: none; height: 25px; line-height: 25px; margin-top: 3px;}
 .editfee textarea { border: 1px; border-style: solid; background-color: #D0D0D0}
 
+.person a{ color: #000000;text-decoration: none;}
 .roomno{background-color: #ffccff; text-align: center;width: 304px;height: 25px;line-height:25px;float: left;margin-top: 20px;margin-left: 28px; font-weight: bold}
 .right-room01{width:150px;height: 66px;border: 1px;border-style: solid;border-color: #0000FF;float: left;margin-left: 28px;padding: 0px; }
 .right-room01 .bed-no{width: 20px;height: 66px; line-height:66px;float: left;margin: 0px;padding-left: 0px; background-color: #dddddd}

@@ -166,6 +166,8 @@ $status=$this->upload->do_upload('upfile');//此外的参数必须与表单中�
     }
 }
 public function bedstatus(){
+    $this->load->model('clientinfo_model','clientinfo');
+    $data['bedinfo']=$this->clientinfo->getbedinfo();
     $data['title']='床位状态分布图';
     $this->load->view('header.html',$data);
     $this->load->view('client/bedstatus.html');

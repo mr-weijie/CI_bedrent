@@ -3,12 +3,12 @@
 <div class="roomno">左屋</div>
 <div class="left-room01">
     <div class="bed">
-        <div class="up">
-            <div class="person">孙奕颖[08.31]</div>
+        <div class="up"><?php $ClientID=isset($bedinfo['6上']) ?$bedinfo['6上']['ClientID']:'' ?>
+            <div class="person" <?php if(!isset($bedinfo['6上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['6上']) ?$bedinfo['6上']['ClientName'].'['.date('m.d',strtotime($bedinfo['6上']['StopDate'])).']':'' ?></a> </div>
             <div class="no">上</div>
         </div>
-        <div class="down">
-            <div class="person">史淑琴[09.17]</div>
+    <div class="down"><?php $ClientID=isset($bedinfo['6下']) ?$bedinfo['6下']['ClientID']:'' ?>
+        <div class="person" <?php if(!isset($bedinfo['6下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['6下']) ?$bedinfo['6下']['ClientName'].'['.date('m.d',strtotime($bedinfo['6下']['StopDate'])).']':'' ?></a> </div>
             <div class="no">下</div>
         </div>
     </div>
@@ -17,29 +17,29 @@
 
 <div class="left-room02">
     <div class="bed">
-        <div class="up">
-            <div class="person">张楠[09.18]</div>
-            <div class="no">上</div>
-        </div>
-        <div class="down">
-            <div class="person">林秋月[09.17]</div>
-            <div class="no">下</div>
-        </div>
+        <div class="up"><?php $ClientID=isset($bedinfo['5上']) ?$bedinfo['5上']['ClientID']:'' ?>
+            <div class="person" <?php if(!isset($bedinfo['5上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['5上']) ?$bedinfo['5上']['ClientName'].'['.date('m.d',strtotime($bedinfo['5上']['StopDate'])).']':'' ?></a> </div>
+        <div class="no">上</div>
     </div>
+    <div class="down"><?php $ClientID=isset($bedinfo['5下']) ?$bedinfo['5下']['ClientID']:'' ?>
+        <div class="person" <?php if(!isset($bedinfo['5下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['5下']) ?$bedinfo['5下']['ClientName'].'['.date('m.d',strtotime($bedinfo['5下']['StopDate'])).']':'' ?></a> </div>
+    <div class="no">下</div>
+</div>
+</div>
     <div class="bed-no">05</div>
 </div>
 
 <div class="left-room01">
     <div class="bed">
-        <div class="up">
-            <div class="person">于晓雪[09.11]</div>
-            <div class="no">上</div>
-        </div>
-        <div class="down">
-            <div class="person">赵珍[09.27]</div>
-            <div class="no">下</div>
-        </div>
+        <div class="up"><?php $ClientID=isset($bedinfo['7上']) ?$bedinfo['7上']['ClientID']:'' ?>
+            <div class="person" <?php if(!isset($bedinfo['7上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['7上']) ?$bedinfo['7上']['ClientName'].'['.date('m.d',strtotime($bedinfo['7上']['StopDate'])).']':'' ?></a> </div>
+        <div class="no">上</div>
     </div>
+    <div class="down"><?php $ClientID=isset($bedinfo['7下']) ?$bedinfo['7下']['ClientID']:'' ?>
+        <div class="person" <?php if(!isset($bedinfo['7下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['7下']) ?$bedinfo['7下']['ClientName'].'['.date('m.d',strtotime($bedinfo['7下']['StopDate'])).']':'' ?></a> </div>
+    <div class="no">下</div>
+</div>
+</div>
     <div class="bed-no">07</div>
 </div>
 
@@ -49,15 +49,15 @@
 
 <div class="left-room03">
     <div class="bed">
-        <div class="up">
-            <div class="person">段畅[10.20]</div>
-            <div class="no">上</div>
-        </div>
-        <div class="down">
-            <div class="person">刘欢欢[10.20]</div>
-            <div class="no">下</div>
-        </div>
+        <div class="up"><?php $ClientID=isset($bedinfo['8上']) ?$bedinfo['8上']['ClientID']:'' ?>
+            <div class="person" <?php if(!isset($bedinfo['8上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['8上']) ?$bedinfo['8上']['ClientName'].'['.date('m.d',strtotime($bedinfo['8上']['StopDate'])).']':'' ?></a> </div>
+        <div class="no">上</div>
     </div>
+    <div class="down"><?php $ClientID=isset($bedinfo['8下']) ?$bedinfo['8下']['ClientID']:'' ?>
+        <div class="person" <?php if(!isset($bedinfo['8下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['8下']) ?$bedinfo['8下']['ClientName'].'['.date('m.d',strtotime($bedinfo['8下']['StopDate'])).']':'' ?></a> </div>
+    <div class="no">下</div>
+</div>
+</div>
     <div class="bed-no">08</div>
 </div>
 
@@ -66,13 +66,13 @@
 <div class="right-room01">
     <div class="bed-no">01</div>
     <div class="bed">
-        <div class="up">
+        <div class="up"><?php $ClientID=isset($bedinfo['1上']) ?$bedinfo['1上']['ClientID']:'' ?>
             <div class="no">上</div>
-            <div class="person">张弟[09.09]</div>
+            <div class="person" <?php if(!isset($bedinfo['1上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['1上']) ?$bedinfo['1上']['ClientName'].'['.date('m.d',strtotime($bedinfo['1上']['StopDate'])).']':'' ?></a> </div>
         </div>
-        <div class="down">
+        <div class="down"><?php $ClientID=isset($bedinfo['1下']) ?$bedinfo['1下']['ClientID']:'' ?>
             <div class="no">下</div>
-            <div class="person">吕红[08.31]</div>
+            <div class="person" <?php if(!isset($bedinfo['1下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['1下']) ?$bedinfo['1下']['ClientName'].'['.date('m.d',strtotime($bedinfo['1下']['StopDate'])).']':'' ?></a> </div>
         </div>
     </div>
 </div>
@@ -80,15 +80,15 @@
 <div class="right-room02">
     <div class="bed-no">02</div>
     <div class="bed">
-        <div class="up">
+        <div class="up"><?php $ClientID=isset($bedinfo['2上']) ?$bedinfo['2上']['ClientID']:'' ?>
             <div class="no">上</div>
-            <div class="person">张芳婷[09.08]</div>
+            <div class="person" <?php if(!isset($bedinfo['2上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['2上']) ?$bedinfo['2上']['ClientName'].'['.date('m.d',strtotime($bedinfo['2上']['StopDate'])).']':'' ?></a> </div>
         </div>
-        <div class="down">
+        <div class="down"><?php $ClientID=isset($bedinfo['2下']) ?$bedinfo['2下']['ClientID']:'' ?>
             <div class="no">下</div>
-            <div class="person">张震雪[09.19]</div>
+            <div class="person" <?php if(!isset($bedinfo['2下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['2下']) ?$bedinfo['2下']['ClientName'].'['.date('m.d',strtotime($bedinfo['2下']['StopDate'])).']':'' ?></a> </div>
         </div>
-    </div>
+</div>
 </div>
 
 <div class="right-room">
@@ -97,13 +97,13 @@
 <div class="right-room02">
     <div class="bed-no">03</div>
     <div class="bed">
-        <div class="up">
+        <div class="up"><?php $ClientID=isset($bedinfo['3上']) ?$bedinfo['3上']['ClientID']:'' ?>
             <div class="no">上</div>
-            <div class="person">张源[10.19]</div>
+            <div class="person" <?php if(!isset($bedinfo['3上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['3上']) ?$bedinfo['3上']['ClientName'].'['.date('m.d',strtotime($bedinfo['3上']['StopDate'])).']':'' ?></a> </div>
         </div>
-        <div class="down">
+        <div class="down"><?php $ClientID=isset($bedinfo['3下']) ?$bedinfo['3下']['ClientID']:'' ?>
             <div class="no">下</div>
-            <div class="person">陈赫[09.15]</div>
+            <div class="person" <?php if(!isset($bedinfo['3下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['3下']) ?$bedinfo['3下']['ClientName'].'['.date('m.d',strtotime($bedinfo['3下']['StopDate'])).']':'' ?></a> </div>
         </div>
     </div>
 </div>
@@ -111,13 +111,13 @@
 <div class="right-room03">
     <div class="bed-no">04</div>
     <div class="bed">
-        <div class="up">
+        <div class="up"><?php $ClientID=isset($bedinfo['4上']) ?$bedinfo['4上']['ClientID']:'' ?>
             <div class="no">上</div>
-            <div class="person">段畅[10.20]</div>
+            <div class="person" <?php if(!isset($bedinfo['4上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['4上']) ?$bedinfo['4上']['ClientName'].'['.date('m.d',strtotime($bedinfo['4上']['StopDate'])).']':'' ?></a> </div>
         </div>
-        <div class="down">
+        <div class="down"><?php $ClientID=isset($bedinfo['4下']) ?$bedinfo['4下']['ClientID']:'' ?>
             <div class="no">下</div>
-            <div class="person">刘欢欢[10.20]</div>
+            <div class="person" <?php if(!isset($bedinfo['4下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['4下']) ?$bedinfo['4下']['ClientName'].'['.date('m.d',strtotime($bedinfo['4下']['StopDate'])).']':'' ?></a> </div>
         </div>
     </div>
 </div>
@@ -129,12 +129,12 @@
 
     <div class="living-room01">
         <div class="bed">
-            <div class="up">
-                <div class="person">韩翠玉[09.04]</div>
+            <div class="up"><?php $ClientID=isset($bedinfo['11上']) ?$bedinfo['11上']['ClientID']:'' ?>
+                <div class="person" <?php if(!isset($bedinfo['11上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['11上']) ?$bedinfo['11上']['ClientName'].'['.date('m.d',strtotime($bedinfo['11上']['StopDate'])).']':'' ?></a> </div>
                 <div class="no">上</div>
             </div>
-            <div class="down">
-                <div class="person">任雯颖[09.05]</div>
+            <div class="down"><?php $ClientID=isset($bedinfo['11下']) ?$bedinfo['11下']['ClientID']:'' ?>
+                <div class="person" <?php if(!isset($bedinfo['11下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['11下']) ?$bedinfo['11下']['ClientName'].'['.date('m.d',strtotime($bedinfo['11下']['StopDate'])).']':'' ?></a> </div>
                 <div class="no">下</div>
             </div>
         </div>
@@ -143,29 +143,29 @@
 
     <div class="living-room02">
         <div class="bed">
-            <div class="up">
-                <div class="person">范文怡[09.19]</div>
-                <div class="no">上</div>
-            </div>
-            <div class="down">
-                <div class="person">李爽[09.20]</div>
-                <div class="no">下</div>
-            </div>
+            <div class="up"><?php $ClientID=isset($bedinfo['10上']) ?$bedinfo['10上']['ClientID']:'' ?>
+                <div class="person" <?php if(!isset($bedinfo['10上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['10上']) ?$bedinfo['10上']['ClientName'].'['.date('m.d',strtotime($bedinfo['10上']['StopDate'])).']':'' ?></a> </div>
+            <div class="no">上</div>
         </div>
+        <div class="down"><?php $ClientID=isset($bedinfo['10下']) ?$bedinfo['10下']['ClientID']:'' ?>
+            <div class="person" <?php if(!isset($bedinfo['10下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['10下']) ?$bedinfo['10下']['ClientName'].'['.date('m.d',strtotime($bedinfo['10下']['StopDate'])).']':'' ?></a> </div>
+        <div class="no">下</div>
+    </div>
+</div>
         <div class="bed-no">10</div>
     </div>
 
     <div class="living-room01">
         <div class="bed">
-            <div class="up">
-                <div class="person" style="background-color: #009900"></div>
-                <div class="no">上</div>
-            </div>
-            <div class="down">
-                <div class="person">魏汝欣[09.16]</div>
-                <div class="no">下</div>
-            </div>
+            <div class="up"><?php $ClientID=isset($bedinfo['9上']) ?$bedinfo['9上']['ClientID']:'' ?>
+                <div class="person" <?php if(!isset($bedinfo['9上'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['9上']) ?$bedinfo['9上']['ClientName'].'['.date('m.d',strtotime($bedinfo['9上']['StopDate'])).']':'' ?></a> </div>
+            <div class="no">上</div>
         </div>
+        <div class="down"><?php $ClientID=isset($bedinfo['9下']) ?$bedinfo['9下']['ClientID']:'' ?>
+            <div class="person" <?php if(!isset($bedinfo['9下'])) echo 'style="background-color: #009900"' ?>><a href="<?php echo site_url('home/showclient/'.$ClientID)?>"><?php echo isset($bedinfo['9下']) ?$bedinfo['9下']['ClientName'].'['.date('m.d',strtotime($bedinfo['9下']['StopDate'])).']':'' ?></a> </div>
+        <div class="no">下</div>
+    </div>
+</div>
         <div class="bed-no">09</div>
     </div>
 

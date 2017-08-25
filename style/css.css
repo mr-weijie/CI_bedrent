@@ -3,7 +3,10 @@ body { width: 360px;height:100px; margin: 0 auto; border: 2px;}
 div { margin: 0 auto;}
 a { text-decoration: none; color: #4F5155;}
 a:hover{ color: #0000FF; text-decoration: underline;}
-.nav{ width: 350px; height: 30px; background-color:#dddddd;}
+.nav-living-room{ width: 304px; height: 30px;line-height: 30px; background-color:#dddddd; text-align: center;}
+.nav-living-room a{color: #0000FF;font-weight: bold;}
+
+.nav{ width: 350px; height: 30px;line-height: 30px; background-color:#dddddd;}
 .nav a{color: #0000FF;font-weight: bold;}
 .nav ul{ padding-left: 2px; }
 .nav ul li{ float: left; list-style: none; margin-left: 10px;  height: 30px; line-height: 30px;}
@@ -50,3 +53,96 @@ select{ border: 1px;border-style: solid; border-color: #0000FF; background-color
 .editfee ul{ padding-left: 12px;}
 .editfee ul li{font-size: 16px; list-style: none; height: 25px; line-height: 25px; margin-top: 3px;}
 .editfee textarea { border: 1px; border-style: solid; background-color: #D0D0D0}
+
+.roomno{background-color: #ffccff; text-align: center;width: 304px;height: 25px;line-height:25px;float: left;margin-top: 20px;margin-left: 28px; font-weight: bold}
+.right-room01{width:150px;height: 66px;border: 1px;border-style: solid;border-color: #0000FF;float: left;margin-left: 28px;padding: 0px; }
+.right-room01 .bed-no{width: 20px;height: 66px; line-height:66px;float: left;margin: 0px;padding-left: 0px; background-color: #dddddd}
+.right-room01 .bed{width: 130px; height: 66px;background-color:#ffffff; float: left;}
+.right-room01 .up{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;margin-bottom: 1px}
+.right-room01 .up      .no{width: 26px;height: 32px;line-height: 32px; background-color: #995300;float: left;}
+.right-room01 .up .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;}
+.right-room01 .down{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;}
+.right-room01 .down .no{width: 26px;height: 32px; line-height:32px;background-color: #995300;float: left;}
+.right-room01 .down .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;padding: 0px;}
+
+.right-room02{width:150px;height: 66px;border: 1px;border-style: solid;border-color: #0000FF;float:left;}
+.right-room02 .bed-no{width: 20px;height: 66px; line-height:66px;float: left;margin: 0px;padding-left: 0px; background-color: #dddddd}
+.right-room02 .bed{width: 130px; height: 66px;background-color:#ffffff; float: left;}
+.right-room02 .up{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;margin-bottom: 1px}
+.right-room02 .up      .no{width: 26px;height: 32px;line-height: 32px; background-color: #995300;float: left;}
+.right-room02 .up .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;}
+.right-room02 .down{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;}
+.right-room02 .down .no{width: 26px;height: 32px; line-height:32px;background-color: #995300;float: left;}
+.right-room02 .down .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;}
+
+.right-room{width:152px;height: 66px;border: 0px;border-style: solid;border-color: #0000FF;float: left;margin-left: 28px;padding: 0px; background-color: #ffffff;}
+
+.right-room03{clear: both;width:302px;height: 66px;border: 1px;border-style: solid;border-color: #0000FF;float: left;margin-left: 28px;padding: 0px; }
+.right-room03 .bed-no{width: 20px;height: 66px; line-height:66px;float: left;margin: 0px;padding-left: 0px; background-color: #dddddd}
+.right-room03 .bed{width: 282px; height: 66px;background-color:#dddddd; float: left;}
+.right-room03 .up{ width: 282px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;margin-bottom: 1px}
+.right-room03 .up      .no{width: 26px;height: 32px;line-height: 32px; background-color: #995300;float: left;}
+.right-room03 .up .person{width: 256px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;}
+.right-room03 .down{ width: 282px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;}
+.right-room03 .down .no{width: 26px;height: 32px; line-height:32px;background-color: #995300;float: left;}
+.right-room03 .down .person{width: 256px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;padding: 0px;}
+
+
+.left-room01 {width:150px;height: 66px;border: 1px;border-style: solid;border-color: #0000FF;float: left;margin-left: 28px;padding: 0px; }
+.left-room01 .bed-no{width: 20px;height: 66px; line-height:66px;float: left;margin: 0px;padding-left: 0px; background-color: #dddddd}
+.left-room01 .bed{width: 130px; height: 66px;background-color:#ffffff; float: left;}
+.left-room01 .up{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;margin-bottom: 1px}
+.left-room01 .up      .no{width: 26px;height: 32px;line-height: 32px; background-color: #995300;float: left;}
+.left-room01 .up .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;}
+.left-room01 .down{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;}
+.left-room01 .down .no{width: 26px;height: 32px; line-height:32px;background-color: #995300;float: left;}
+.left-room01 .down .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;padding: 0px;}
+
+.left-room02{width:150px;height: 66px;border: 1px;border-style: solid;border-color: #0000FF;float:left;}
+.left-room02 .bed-no{width: 20px;height: 66px; line-height:66px;float: left;margin: 0px;padding-left: 0px; background-color: #dddddd}
+.left-room02 .bed{width: 130px; height: 66px;background-color:#ffffff; float: left;}
+.left-room02 .up{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;margin-bottom: 1px}
+.left-room02 .up      .no{width: 26px;height: 32px;line-height: 32px; background-color: #995300;float: left;}
+.left-room02 .up .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;}
+.left-room02 .down{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;}
+.left-room02 .down .no{width: 26px;height: 32px; line-height:32px;background-color: #995300;float: left;}
+.left-room02 .down .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;padding: 0px;}
+
+.left-room03{clear: both;width:302px;height: 66px;border: 1px;border-style: solid;border-color: #0000FF;float: left;margin-left: 28px;padding: 0px; }
+.left-room03 .bed-no{width: 20px;height: 66px; line-height:66px;float: left;margin: 0px;padding-left: 0px; background-color: #dddddd}
+.left-room03 .bed{width: 282px; height: 66px;background-color:#ffffff; float: left;}
+.left-room03 .up{ width: 282px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;margin-bottom: 1px}
+.left-room03 .up      .no{width: 26px;height: 32px;line-height: 32px; background-color: #995300;float: left;}
+.left-room03 .up .person{width: 256px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;}
+.left-room03 .down{ width: 282px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;}
+.left-room03 .down .no{width: 26px;height: 32px; line-height:32px;background-color: #995300;float: left;}
+.left-room03 .down .person{width: 256px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;padding: 0px;}
+.left-room{width:152px;height: 66px;border: 0px;border-style: solid;border-color: #0000FF;float: left;margin-left: 28px;padding: 0px; background-color: #ffffff;}
+
+.living-room {clear: both; border: 1px solid; border-color:#dddddd; border-bottom-style: none; width: 302px; height: 204px;padding: 0px;margin-bottom: 50px;}
+.living-room01{width:220px;height: 66px;border: 1px;border-style: solid;border-color: #0000FF;float:left;margin-left: 0px;padding: 0px; }
+.living-room01 .bed{width: 200px; height: 66px;background-color:#4F5155; float: left;}
+.living-room01 .up{ width: 200px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;margin-bottom: 1px;float: left;}
+.living-room01 .up .person{width: 174px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;}
+.living-room01 .up      .no{width: 26px;height: 32px;line-height: 32px; background-color: #995300;float: left;}
+.living-room01 .down{ width: 200px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;}
+.living-room01 .down .no{width: 26px;height: 32px; line-height:32px;background-color: #995300;float: left;}
+.living-room01 .down .person{width: 174px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;padding: 0px;}
+.living-room01 .bed-no{width: 20px;height: 66px; line-height:66px;float: left;margin: 0px;padding-left: 0px; background-color: #dddddd}
+
+.living-room02 {width:150px;height: 66px;border: 1px;border-style: solid;border-color: #0000FF;float: left;margin-left: 0px;padding: 0px; }
+.living-room02 .bed-no{width: 20px;height: 66px; line-height:66px;float: left;margin: 0px;padding-left: 0px; background-color: #dddddd}
+.living-room02 .bed{width: 130px; height: 66px;background-color:#ffffff; float: left;}
+.living-room02 .up{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;margin-bottom: 1px}
+.living-room02 .up      .no{width: 26px;height: 32px;line-height: 32px; background-color: #995300;float: left;}
+.living-room02 .up .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;}
+.living-room02 .down{ width: 130px;height: 32px;border: 0px;border-style: solid;border-color: #0000FF;background-color: #cd6e00;}
+.living-room02 .down .no{width: 26px;height: 32px; line-height:32px;background-color: #995300;float: left;}
+.living-room02 .down .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;padding: 0px;}
+
+
+
+
+
+
+

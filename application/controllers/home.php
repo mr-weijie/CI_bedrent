@@ -165,5 +165,12 @@ $status=$this->upload->do_upload('upfile');//此外的参数必须与表单中�
         error('请正确选择图片后再上传！');
     }
 }
+public function bedstatus(){
+    $data['title']='床位状态分布图';
+    $this->load->view('header.html',$data);
+    $this->load->view('client/bedstatus.html');
+    $this->load->view('footer.html');
+}
+
 }
 ?>

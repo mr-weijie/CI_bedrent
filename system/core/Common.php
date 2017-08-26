@@ -878,3 +878,21 @@ function success($url, $msg){
     echo "<script type='text/javascript'>alert('$msg');location.href='$url'</script>";
     die;
 }
+/*
+ * 打印用户定义常量，也可以打印CI框架中的已定义的常量
+ * */
+function print_const(){
+    $const=get_defined_constants(true);
+    p($const['user']);
+
+}
+function chktimeout(){
+
+    if(!isset($_SESSION)){
+        session_start();//开启session,只有开启session后，所有session操作才能有效
+    }
+    if(!isset($_SESSION ['usrid'])){
+        session_abort();
+        redirect(site_url('home/login'));
+    }
+}

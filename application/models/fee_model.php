@@ -27,7 +27,7 @@ class Fee_model extends CI_Model {
     }
     public function getfeeinfo($FeeID){
         //$data=$this->db->where(array('FeeID'=>$FeeID))->get('fee')->result_array();
-        $data=$this->db->select('FeeID,fee.ClientName,fee.ClientID,fee.IdentityID,Rent,Bedding,fee.StartDate,fee.StopDate,fee.Remarks,BedNo,fee.ModDate')->from('fee')->join('clientinfo','fee.IdentityID=clientinfo.IdentityID')->where(array('FeeID'=>$FeeID))->get()->result_array();
+        $data=$this->db->select('FeeID,fee.ClientName,fee.ClientID,fee.IdentityID,Rent,Bedding,fee.StartDate,fee.StopDate,fee.Remarks,BedNo,fee.ModDate,fee.Editor')->from('fee')->join('clientinfo','fee.IdentityID=clientinfo.IdentityID')->where(array('FeeID'=>$FeeID))->get()->result_array();
          // p($data);
         return $data;
     }

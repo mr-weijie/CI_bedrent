@@ -22,6 +22,7 @@
         <li>入住状态：<?php echo ($clientinfo[0]['Valid']==1) ? "在住" : '搬离' ?></li>
         <li>备注说明：<?php echo $clientinfo[0]['Remarks']; ?></li>
         <li>最后更新：<?php echo $clientinfo[0]['ModDate']; ?></li>
+        <li>更新人：<?php echo $clientinfo[0]['Editor']; ?></li>
         <li class="upload">上传图片:
             <span>
                 <form enctype="multipart/form-data" method="post" name="upform" action="<?php echo site_url('home/upload/'.$clientinfo[0]['ClientID'])?>">

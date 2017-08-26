@@ -141,9 +141,14 @@ select{ border: 1px;border-style: solid; border-color: #0000FF; background-color
 .living-room02 .down .no{width: 26px;height: 32px; line-height:32px;background-color: #995300;float: left;}
 .living-room02 .down .person{width: 104px;height: 32px;line-height: 32px; background-color: #ff0000;float: left;padding: 0px;}
 
-
-
-
+.login{width:240px;height: 145px;border: 1px solid;border-color:#dddddd;margin-top: 30px;}
+.login div{background-color: #D0D0D0;}
+.login-input{border: 1px solid;border-color: #cd6e00; width: 100px;height: 16px;padding: 2px;}
+.login-captcha{border: 1px solid;border-color: #cd6e00; width: 60px;height: 16px;padding: 2px;}
+.usrid{width: 230px;height: 35px; line-height:35px;background-color: #dddddd; padding-left: 10px;}
+.captcha-div{width: 238px;height: 30px; line-height:30px;background-color: #dddddd; padding-left: 2px;}
+.captcha{width: 140px;background-color:#dddddd;float: left;padding-left: 10px;  }
+.login-submit{width: 240px;height: 45px; line-height:45px;background-color: #dddddd; text-align: center; }
 
 
 

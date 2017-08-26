@@ -1,0 +1,12 @@
+<form name="form1" action="<?php echo site_url('login/chkuser')?>" method="post">
+    <div class="login">
+        <div class="usrid">用户账号：<input type="text" class="login-input" name="usrid" value="<?php echo set_value('usrid')?>"> </div><?php echo form_error('usrid', '<div class="usrid" style="color:#FF0000">', '</div>') ?>
+        <div class="usrid">登录密码：<input type="password" class="login-input" name="pwd" value="<?php echo set_value('pwd')?>"> </div><?php echo form_error('pwd', '<div class="usrid" style="color:#FF0000">', '</div>') ?>
+        <div class="captcha-div">
+            <div class="captcha">&nbsp;&nbsp;&nbsp;验证码：<input type="text" class="login-captcha" name="captcha" value="<?php echo set_value('captcha')?>"></div><?php echo form_error('captcha', '<div class="usrid" style="color:#FF0000">', '</div>') ?>
+            <div><img src="<?php echo site_url('login/captcha')?>"></div>
+        </div>
+        <div class="login-submit"><input type="submit" name="submit" value="登录"></div>
+    </div>
+
+</form>

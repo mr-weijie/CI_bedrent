@@ -21,7 +21,7 @@ class Cardfee_model extends CI_Model{
     }
     public function getfeeinfo($FeeID){
        // $data=$this->db->where(array('FeeID'=>$FeeID))->get('waterfee')->result_array();
-        $data=$this->db->select('FeeID,BedNo,waterfee.CardNo,waterfee.ClientName,waterfee.ClientID,waterfee.IdentityID,Money,waterfee.Remarks,waterfee.ModDate')->from('waterfee')->join('clientinfo','waterfee.IdentityID=clientinfo.IdentityID')->where(array('FeeID'=>$FeeID))->get()->result_array();
+        $data=$this->db->select('FeeID,BedNo,waterfee.CardNo,waterfee.ClientName,waterfee.ClientID,waterfee.IdentityID,Money,waterfee.Remarks,waterfee.ModDate,waterfee.Editor')->from('waterfee')->join('clientinfo','waterfee.IdentityID=clientinfo.IdentityID')->where(array('FeeID'=>$FeeID))->get()->result_array();
         return $data;
     }
     public function update($data,$FeeID){

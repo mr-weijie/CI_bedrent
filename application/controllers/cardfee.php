@@ -4,8 +4,9 @@
  * User: Administrator
  * Date: 2017/8/21
  * Time: 22:28
+ * 为了使用身份验证，改为继承自定义的安全检测控制类MY_Controller
  */
-class Cardfee extends CI_Controller
+class Cardfee extends MY_Controller
 {
     public function index()
     {
@@ -113,6 +114,7 @@ class Cardfee extends CI_Controller
                 'CardNo'=>$this->input->post('CardNo'),
                 'Money'=>$this->input->post('Money'),
                 'Remarks'=>$this->input->post('Remarks'),
+                'Editor'=>$this->session->userdata('usrid'),
                 'ModDate'=>date('Y-m-d H:i:s')
             );
             $this->load->model('cardfee_model','cardfee');
@@ -145,6 +147,7 @@ class Cardfee extends CI_Controller
                 'CardNo'=>$this->input->post('CardNo'),
                 'Money'=>$this->input->post('Money'),
                 'Remarks'=>$this->input->post('Remarks'),
+                'Editor'=>$this->session->userdata('usrid'),
                 'ModDate'=>date('Y-m-d H:i:s')
             );
             $this->load->model('cardfee_model','cardfee');

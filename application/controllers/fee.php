@@ -5,7 +5,7 @@
  * Date: 2017/8/20
  * Time: 7:01
  */
-class Fee extends CI_Controller{
+class Fee extends MY_Controller {
 
     public function index(){
         $this->feelist();
@@ -107,6 +107,7 @@ class Fee extends CI_Controller{
                 'StartDate'=>$this->input->post('StartDate'),
                 'StopDate'=>$this->input->post('StopDate'),
                 'Remarks'=>$this->input->post('Remarks'),
+                'Editor'=>$this->session->userdata('usrid'),
                 'ModDate'	=> date('Y-m-d H:i:s')//注意格式中的H:i:s为24小时制，h:i:s为12小时制,Y为四位年，y为二位年
             );
             $this->load->model('fee_model','fee');
@@ -136,6 +137,7 @@ class Fee extends CI_Controller{
                 'StartDate'=>$this->input->post('StartDate'),
                 'StopDate'=>$this->input->post('StopDate'),
                 'Remarks'=>$this->input->post('Remarks'),
+                'Editor'=>$this->session->userdata('usrid'),
                 'ModDate'	=> date('Y-m-d H:i:s')//注意格式中的H:i:s为24小时制，h:i:s为12小时制,Y为四位年，y为二位年
             );
             $this->load->model('fee_model','fee');

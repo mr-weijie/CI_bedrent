@@ -42,5 +42,10 @@ public function getbedinfo(){
    // p($bedNo);
     return $bedNo;
 }
+public function chkuser($usrid,$pwd){
+    $pwd=md5($pwd);
+    $data=$this->db->select('usrname,usrid')->where(array('usrid'=>$usrid,'pwd'=>$pwd))->get('admin')->result_array();
+    return $data;
+}
 }
 

@@ -2,9 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
-* 
+* 为了使用身份验证，改为继承自定义的安全检测控制类MY_Controller
 */
-class Home extends CI_Controller{
+class Home extends MY_Controller {
 
 public function index(){
     $this->listclient();
@@ -78,7 +78,8 @@ public function insertclient(){
             'StopDate'=>$this->input->post('StopDate'),
             'Remarks'=>$this->input->post('Remarks'),
             'Valid'=>$this->input->post('Valid'),
-            'ModDate'	=> mdate('%Y-%m-%d %h:%i:%s', time())
+            'Editor'=>$this->session->userdata('usrid'),
+            'ModDate'	=> date('Y-m-d h:i:s')
         );
         $this->load->model('clientinfo_model','clientinfo');
         $status=$this->clientinfo->insertclient($data);
@@ -125,6 +126,7 @@ public  function updateclient(){
             'Deposit'=> $this->input->post('Deposit'),
             'Remarks'=> $this->input->post('Remarks'),
             'Valid'=> $this->input->post('Valid'),
+            'Editor'=>$this->session->userdata('usrid'),
             'ModDate'	=> date('Y-m-d H:i:s')
         );
         $this->load->model('clientinfo_model','client');

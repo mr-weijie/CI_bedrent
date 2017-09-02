@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//$config['base_url'] ='';端口是80时，可以这样写
+//$config['base_url'] ='';//端口是80时，可以这样写
 $realIP=gethostbyname(gethostname());
 $config['base_url'] = 'http://'.$realIP.':8080';
 

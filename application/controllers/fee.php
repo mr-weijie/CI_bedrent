@@ -113,6 +113,12 @@ class Fee extends MY_Controller {
             $this->load->model('fee_model','fee');
             $status=$this->fee->insert($data);
             if($status){
+                $data=array(
+                    'StartDate'=>$this->input->post('StartDate'),
+                    'StopDate'=>$this->input->post('StopDate')
+                );
+                $this->load->model('clientinfo_model','clientinfo');
+                $this->clientinfo->updateclientinfo($ClientID,$data);//更新房客服务到期
                 $msg='新增缴费记录成功！';
                 $url='fee/feelist/'.$ClientID;
                 success($url, $msg);

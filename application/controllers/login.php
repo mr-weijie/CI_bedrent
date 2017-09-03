@@ -49,7 +49,8 @@ class Login extends CI_Controller{
                 session_start();//开启session,只有开启session后，所有session操作才能有效
             }
             if($captcha!=$_SESSION ['code']){
-                error('验证码错误！');
+              //  error('验证码错误！');
+                //暂时不检查验证码
             }
             $this->load->model('clientinfo_model','clientinfo');
             $data=$this->clientinfo->chkuser($usrid,$pwd);

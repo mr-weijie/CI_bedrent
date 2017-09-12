@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 2017/8/26
  * Time: 17:25
  */
-class Login extends CI_Controller{
+class Login extends CI_Controller {
 
 
     public function index(){

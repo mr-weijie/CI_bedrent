@@ -1,6 +1,6 @@
 <div class="nav">
     <ul>
-        <li><a href="/">首页</a> </li><?php $ClientID=isset($clientinfo[0]['ClientID'])? $clientinfo[0]['ClientID']:set_value('ClientID'); ?>
+        <li><a href="<?php echo site_url('home')?>">首页</a> </li><?php $ClientID=isset($clientinfo[0]['ClientID'])? $clientinfo[0]['ClientID']:set_value('ClientID'); ?>
         <li><a href="<?php echo site_url('cardfee/feelist/'.$ClientID) ?>">水费列表</a> </li>
     </ul>
 </div>

@@ -141,7 +141,7 @@ public  function updateclient(){
     {
         $this->load->helper('form');//为了能显示后台返回来的出错信息，在这里载入form辅助函数。
         $this->load->view('header.html');
-        $this->load->view('client/addclient.html');
+        $this->load->view('client/editclient.html');
         $this->load->view('footer.html');
     }
 

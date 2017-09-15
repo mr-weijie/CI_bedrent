@@ -9,6 +9,7 @@
         <li>身份证号：<input type="text" class="input" name="IdentityID" value="<?php echo isset($clientinfo[0]['IdentityID']) ?$clientinfo[0]['IdentityID']:set_value('IdentityID') ?>"></li><?php echo form_error('IdentityID', '<li class="err">', '</li>') ?>
         <li>入住床号：<input type="text" class="input" name="BedNo" value="<?php echo isset($clientinfo[0]['BedNo']) ?$clientinfo[0]['BedNo']:set_value('BedNo')?>"></li><?php echo form_error('BedNo', '<li class="err">', '</li>') ?>
         <li>水卡编号：<input type="text" class="input" name="CardNo" value="<?php echo isset($clientinfo[0]['CardNo']) ?$clientinfo[0]['CardNo']:set_value('CardNo') ?>"></li><?php echo form_error('CardNo', '<li class="err">', '</li>') ?>
+        <li>物品箱号：<input type="text" class="input" name="BoxNo" value="<?php echo isset($clientinfo[0]['BoxNo']) ?$clientinfo[0]['BoxNo']:set_value('BoxNo') ?>" ></li>
         <li>本人电话：<input type="text" class="input" name="PhoneNo" value="<?php echo isset($clientinfo[0]['PhoneNo']) ?$clientinfo[0]['PhoneNo']:set_value('PhoneNo')?>"></li><?php echo form_error('PhoneNo', '<li class="err">', '</li>') ?>
         <li>他人电话：<input type="text" class="input" name="ContactPhoneNo" value="<?php echo isset($clientinfo[0]['ContactPhoneNo']) ?$clientinfo[0]['ContactPhoneNo']:set_value('ContactPhoneNo') ?>"></li>
         <li>他人关系：<input type="text" class="input" name="ContactRelation" value="<?php echo isset($clientinfo[0]['ContactRelation']) ?$clientinfo[0]['ContactRelation']:set_value('ContactRelation')?>"></li>
